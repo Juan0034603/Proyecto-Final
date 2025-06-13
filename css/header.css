@@ -1,0 +1,49 @@
+#lupa {
+    height: 7vh;
+    /* relativo a la altura de la pantalla */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 3vw;
+    /* responsive */
+
+}
+
+.divHeader {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#logo {
+    height: 13vh;
+    /* relativo a la altura de la pantalla */
+    width: auto;
+    border-radius: 15%;
+}
+
+#nombre-escuela {
+    color: #0b0c2a;
+    font-weight: 600;
+    font-size: 2.2rem;
+    /* más grande que el texto base */
+}
+
+.redes-sociales {
+    font-size: 2rem;
+    color: #1e1d1d;
+    margin: 0 0.8vw;
+    transition: color 0.3s ease;
+}
+
+.redes-sociales:hover {
+    color: #0550a1;
+}
+
+header img[alt="lupa"] {
+    height: 5vh;
+    width: auto;
+}

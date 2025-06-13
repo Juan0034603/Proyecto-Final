@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estudiante.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Estudiante</title>
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+
+<body>
+    <header >
+        <img id="lupa" src="../recursos/lupa.png" alt="lupa">
+
+        <div class="divHeader">
+            <img id="logo" src="../recursos/logo-removebg-preview.png" alt="logo_de_la_escuela">
+            <div id="nombre-escuela">Mi ColeWeb</div>
+        </div>
+
+        <div class="divHeader">
+            <a class="redes-sociales" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="redes-sociales" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="redes-sociales" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="redes-sociales" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="redes-sociales" href="../html/iniciosesion.html"><i id="inicio"
+                    class="fas fa-user-circle"></i></a>
+        </div>
+    </header>
+    <section class="acercaDeContainer">
+        <div class="acercaDe">
+            <div>
+                <img id="imagenEstudiante" src="../recursos/calendario-2025.jpg" alt="Imagen Estudiante con Tablet">
+            </div>
+
+            <div class="textoContenedor">
+                <h2 id="textoH2">Consultar horario</h2>
+
+
+                <div class="input-group">
+                    <form action="">
+                        <input type="text" placeholder="Usuario" required>
+
+                    </form>
+                </div>
+
+
+                <button type="submit" class="botonInicio">Login</button>
+            </div>
+        </div>
+        </div> 
+    </section>
+
+    <section id="SectionContraseña">
+        <div class="contenedor-formulario">
+            <h1 class="titulo-formulario">Cambiar Contraseña</h1>
+            <hr class="divisor-titulo">
+
+            <form>
+
+                <input type="text" class="entrada-formulario" id="usuario" placeholder="Usuario" requiredminlength="3"
+                    autocomplete="Usuario">
+                <div class="texto-ayuda">Mínimo 3 caracteres</div>
+
+
+
+                <input type="password" class="entrada-formulario" id="contrasena_actual" placeholder="Contraseña"
+                    required autocomplete="current-password">
+                <div class="texto-ayuda">Ingrese su contraseña actual</div>
+
+
+                <input type="password" class="entrada-formulario" id="nueva_contrasena" placeholder="Nueva contraseña"
+                    required minlength="6" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$" autocomplete="new-password">
+                <div class="texto-ayuda">Mínimo 6 caracteres, incluir mayúsculas, minúsculas y números</div>
+
+
+
+                <input type="password" class="entrada-formulario" id="confirmar_contrasena"
+                    placeholder="Confirmar contraseña" required minlength="6" autocomplete="new-password">
+                <div class="texto-ayuda">Debe coincidir con la nueva contraseña</div>
+
+
+
+
+
+
+
+            </form>
+
+            <button type="submit" class="botonInicio">Login</button>
+
+            <div class="pie-formulario">
+                <a href="#" class="enlace-volver">← Volver al inicio</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

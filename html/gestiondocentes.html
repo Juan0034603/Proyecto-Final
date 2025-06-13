@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Docentes</title>
-    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../css/gestiondocentes.css">
+    <script src="../js/docente.js"></script>
+    <script src="../js/gestiondocentes.js"></script>
+    <script src="../js/utilidades.js"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="../js/utilidades.js"></script>
-    <script src="../js/registroestudiantes.js"></script>
-    <script src="../js/estudiante.js"></script>
-</head>
+    <script>
+
+        // removerLocalStore()
+    </script>
 
 <body>
     <header>
@@ -34,13 +37,12 @@
     </header>
 
     <section id="sectionUno">
-
         <div class="container">
-            <div class="logo">
-                <img id="logo" src="../recursos/logo-removebg-preview.png" alt="logo_de_la_escuela">
+            <div>
+                <div class="logo-circle"><img id="logo" src="../recursos/logo-removebg-preview.png" alt=""></div>
             </div>
 
-            <form id="estudiantes">
+            <form id="docentes">
                 <div class="form-container">
                     <div class="form-group">
                         <label for="tipoIdentificacion">Tipo de identificación</label>
@@ -54,89 +56,86 @@
 
                     <div class="form-group">
                         <label for="numeroIdentificacion">Número de identificación</label>
-                        <input type="text" id="numeroIdentificacion" placeholder="Número de Identificación" required
-                            pattern="\d{6,15}" title="Debe contener entre 6 y 15 números" maxlength="15">
+                        <input type="text" id="numeroIdentificacion" placeholder="Número identificación" required
+                            pattern="\d{6,15}" maxlength="15" title="Debe contener entre 6 y 15 números"
+                            inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                     </div>
 
                     <div class="form-group">
-                        <label for="nombresCompletos">Nombres Completos</label>
-                        <input type="text" id="nombresCompletos" placeholder="Nombres Completos" required
-                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}" title="Solo letras y espacios (mínimo 3 caracteres)">
+                        <label for="nombresCompletos">Nombres completos</label>
+                        <input type="text" id="nombresCompletos" placeholder="Nombres completos" required
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}" title="Solo letras y espacios (mínimo 3 caracteres)"
+                            maxlength="50">
                     </div>
 
                     <div class="form-group">
-                        <label for="apellidosCompletos">Apellidos Completos</label>
-                        <input type="text" id="apellidosCompletos" placeholder="Apellidos Completos" required
-                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}" title="Solo letras y espacios (mínimo 3 caracteres)">
+                        <label for="apellidosCompletos">Apellidos completos</label>
+                        <input type="text" id="apellidosCompletos" placeholder="Apellidos completos" required
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}" title="Solo letras y espacios (mínimo 3 caracteres)"
+                            maxlength="50">
                     </div>
 
                     <div class="form-group">
-                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                        <input type="date" id="fechaNacimiento" required>
+                        <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fecha-nacimiento" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="telefonoContacto">Teléfonos de Contacto</label>
-                        <input type="tel" id="telefonoContacto" placeholder="Teléfono de Contacto" required
-                            pattern="[0-9]{7,10}" title="Debe contener entre 7 y 10 números" maxlength="10">
+                        <label for="telefonoContacto">Teléfonos de contacto</label>
+                        <input type="tel" id="telefonoContacto" placeholder="Teléfono personal" required
+                            pattern="[0-9]{7,10}" maxlength="10" inputmode="numeric"
+                            title="Debe contener entre 7 y 10 números"
+                            oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                     </div>
 
                     <div class="form-group">
-                        <label for="telefonoSecundario">Teléfono de Contacto Secundario</label>
-                        <input type="tel" id="telefonoSecundario" placeholder="Teléfono Secundario"
-                            pattern="[0-9]{7,10}" title="Debe contener entre 7 y 10 números" maxlength="10">
+                        <label for="telefonoSecundario">Teléfono de contacto secundario</label>
+                        <input type="tel" id="telefonoSecundario" placeholder="Teléfono secundario"
+                            pattern="[0-9]{7,10}" maxlength="10" inputmode="numeric"
+                            title="Debe contener entre 7 y 10 números"
+                            oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                     </div>
 
                     <div class="form-group">
-                        <label for="curso">Curso</label>
-                        <input type="text" id="curso" placeholder="Curso" pattern="[A-Za-z0-9\s\-]{2,20}"
-                            title="Solo letras, números y guiones (ej: 10-A)">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="correoPersonal">Correo Personal</label>
-                        <input type="email" id="correoPersonal" placeholder="Correo Electrónico Personal" required
-                            autocomplete="email">
+                        <label for="correoPersonal">Correo personal</label>
+                        <input type="email" id="correoPersonal" placeholder="Correo personal" required maxlength="100">
                     </div>
 
                     <div class="form-group">
                         <label for="correoEmpresarial">Correo electrónico institucional</label>
-                        <input type="email" id="correoEmpresarial" placeholder="Correo Electrónico Institucional"
-                            required autocomplete="email">
+                        <input type="email" id="correoEmpresarial" placeholder="Correo institucional" required
+                            maxlength="100">
                     </div>
 
                     <div class="form-group">
                         <label for="contrasena">Contraseña</label>
-                        <input type="password" id="contrasena" placeholder="Contraseña" required
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required
                             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
                             title="Debe contener al menos una mayúscula, una minúscula, un número y mínimo 6 caracteres"
                             autocomplete="new-password">
                     </div>
 
+
+
                     <div class="form-group">
                         <label for="usuario">Usuario</label>
-                        <input type="text" id="usuario" placeholder="Usuario" required pattern="[A-Za-z0-9_]{4,20}"
-                            title="Letras, números o guión bajo. Mínimo 4 caracteres" autocomplete="username">
+                        <input type="text" id="usuario" name="usuario" placeholder="Usuario" required
+                            pattern="[A-Za-z0-9_]{4,20}" title="Letras, números o guión bajo. Mínimo 4 caracteres"
+                            maxlength="20">
                     </div>
-
-
                 </div>
-
-
             </form>
 
+
             <div class="button-group">
-                <button onclick="verificarInsercionOActualizacion()" class="btn btn-enviar">Guardar</button>
+                <button onclick="verificarInsercionOActualizacion()" class="btn btn-enviar">Enviar</button>
                 <button onclick="consultar()" class="btn btn-consulta">Consulta</button>
                 <button onclick="nuevo()" class="btn btn-limpiar">Limpiar</button>
+                <a href="../html/iniciosesion.html" class="btn btn-salir">Salir</a>
             </div>
+
         </div>
-
     </section>
-
-</body>
-
-
 </body>
 
 </html>

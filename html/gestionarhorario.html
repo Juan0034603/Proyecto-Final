@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Horario Escolar</title>
+    <link rel="stylesheet" href="../css/gestionhorario.css">
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/curso.js"></script>
+    <script src="../js/gestioncursos.js"></script>
+    <script src="../js/gestionhorario.js"></script>
+
+</head>
+
+<body>
+
+    <div class="contenedorPrincipal">
+        <div class="barraSuperior">
+            <label for="grado">Seleccione el Grado:</label>
+            <select id="grado">
+                <option>Activo</option>
+                <option>Otro</option>
+            </select>
+            <button class="btnConsultar">Consultar Horario</button>
+        </div>
+
+        <table class="tablaHorario">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7:00 - 8:15 Am</td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>8:15 - 9:30 Am</td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+                <tr class="filaDescanso">
+                    <td colspan="6">DESCANSO</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00 Am</td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>11:00 Am - 12:00 Pm</td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="botonesFinales">
+            <button class="btnGuardar">Guardar Cambios</button>
+            <button class="btnEliminar">Eliminar Horario</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

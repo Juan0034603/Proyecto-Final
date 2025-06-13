@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0f3f9;
+}
+
+.contenedorExterno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.contenedorFormulario {
+    background-color: #A9D6E5;
+    padding: 40px;
+    border-radius: 12px;
+    width: 420px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.logoDecorativo {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lineaDiagonal {
+    height: 2px;
+    background-color: #1e3c72;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+.logoCirculo {
+    position: relative;
+    z-index: 2;
+    background-color: #A9D6E5;
+    border: 2px solid #1e3c72;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    line-height: 80px;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.formularioCurso {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.grupoInput {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupoInput label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.grupoInput input,
+.grupoInput select {
+    border: none;
+    border-bottom: 1px solid #888;
+    padding: 6px;
+    background-color: transparent;
+    font-size: 14px;
+    outline: none;
+}
+
+.botoneraCurso {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.botoneraCurso button {
+    background-color: #007C8A;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botoneraCurso button:hover {
+    background-color: #005f63;
+}
+
+#logo {
+    height: 10vh;
+    width: auto;
+    border-radius: 15%;
+}
+
+.btn-salir {
+    background-color: #007C8A;
+    padding: 15px 25px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+
+}

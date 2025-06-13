@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.contenedorPrincipal {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.barraSuperior {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btnConsultar {
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btnConsultar:hover {
+    background-color: #333;
+}
+
+.tablaHorario {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.tablaHorario th,
+.tablaHorario td {
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+
+.tablaHorario th {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+.tablaHorario td select {
+    width: 90%;
+}
+
+.filaDescanso td {
+    background-color: #e6f0ff;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.botonesFinales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btnGuardar,
+.btnEliminar {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btnGuardar:hover,
+.btnEliminar:hover {
+    background-color: #333;
+}

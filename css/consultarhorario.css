@@ -1,0 +1,154 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+.horarioContainer {
+    width: 1140px;
+    height: 1200px;
+    margin-top: 6%;
+    background-color: #A9D6E5;
+    padding: 6% 0;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    box-shadow: 0 4px 15px rgba(35, 34, 34, 0.5);
+    border-radius: 10px;
+}
+
+.horario {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 2%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(169, 214, 229, 0.5);
+    margin-left: 40px;
+    height: 1200px;
+}
+
+.tablaHorarios {
+    width: 800px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.encabezadoTabla {
+    background-color: #666;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #555;
+    font-size: 16px;
+}
+
+.celdaTabla {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.celdaDia {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+    width: 200px;
+    font-size: 12px;
+}
+
+.tarjetaProfesor {
+    background: linear-gradient(135deg, #e3f2fd, #f0f8ff);
+    border-radius: 10px;
+    padding: 10px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(30, 60, 114, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e1e5f2;
+    margin-left: 40px;
+}
+
+.tarjetaProfesor:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.25);
+}
+
+.tarjetaHorario {
+    background: linear-gradient(135deg, #e3f2fd, #f0f8ff);
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(30, 60, 114, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e1e5f2;
+    width: 180px;
+    margin-left: 30px;
+    margin-top: -10px;
+    height: 50px;
+}
+
+.tarjetaHorario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.25);
+}
+
+.tarjetaLunes {
+    min-height: 50px;
+    width: 180px;
+}
+
+.tarjetaMartes {
+    min-height: 45px;
+    width: 180px;
+}
+
+.tarjetaMiercoles {
+    min-height: 48px;
+    width: 180px;
+}
+
+.tarjetaJueves {
+    min-height: 52px;
+    width: 180px;
+}
+
+.tarjetaViernes {
+    min-height: 50px;
+    width: 180px;
+}
+
+.nombreProfesor {
+    color: #1e3c72;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.materiaProfesor {
+    color: #666;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.horarioProfesor {
+    color: #1e3c72;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenedorTarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}

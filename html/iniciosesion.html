@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../css/iniciosesion.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/administrador.js"></script>
+    <script src="../js/iniciosecion.js"></script>
+    <script>
+        crearUsuarioAdministrador()
+    </script>
 </head>
 
 <body>
@@ -25,7 +31,8 @@
             <a class="redes-sociales" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
             <a class="redes-sociales" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
             <a class="redes-sociales" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a class="redes-sociales" href="../html/iniciosesion.html" ><i id="inicio" class="fas fa-user-circle"></i></a>
+            <a class="redes-sociales" href="../html/iniciosesion.html"><i id="inicio"
+                    class="fas fa-user-circle"></i></a>
         </div>
     </header>
     <section>
@@ -38,26 +45,25 @@
 
             <div class="contenedor-login">
                 <h2>Login</h2>
-                <form class="login-form">
+                <form id="inicio" class="login-form">
                     <div class="grupo-entrada">
-                        <input type="text" placeholder="Username" required>
+                        <input id="usuario" type="text" placeholder="Username" required>
                         <i class="fas fa-user"></i>
                     </div>
 
                     <div class="grupo-entrada">
-                        <input type="password" placeholder="Password" required>
+                        <input id="contrasena" type="password" placeholder="Password" required>
                         <i class="fas fa-lock"></i>
                     </div>
 
-                    <div class="opciones">
-                        <label><input type="checkbox"> Remember me</label>
-                        <a href="#">Forgot Password?</a>
-                    </div>
 
-                    <button  type="submit"  class="botonInicio">Login</button>
 
-                    <p class="texto-registro">Don't have an account? <a href="#">Register</a></p>
+
                 </form>
+                <button onclick="iniciarSesion()" class="botonInicio">Login</button>
+
+                <p class="texto-registro">¿No te has registrado aún? <a href="../html/registro.html">Registrate</a>
+                </p>
             </div>
         </div>
 

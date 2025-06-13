@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Curso</title>
+    <link rel="stylesheet" href="../css/gestioncurso.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/curso.js"></script>
+    <script src="../js/gestioncursos.js"></script>
+</head>
+
+<body>
+    <header>
+        <img id="lupa" src="../recursos/lupa.png" alt="lupa">
+
+        <div class="divHeader">
+            <img id="logo" src="../recursos/logo-removebg-preview.png" alt="logo_de_la_escuela">
+            <div id="nombre-escuela">Mi ColeWeb</div>
+        </div>
+
+        <div class="divHeader">
+            <a class="redes-sociales" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="redes-sociales" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="redes-sociales" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="redes-sociales" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="redes-sociales" href="../html/iniciosesion.html"><i id="inicio"
+                    class="fas fa-user-circle"></i></a>
+        </div>
+    </header>
+
+
+    <section class="contenedorExterno">
+        <div class="contenedorFormulario">
+            <div class="logoDecorativo">
+                <div class="lineaDiagonal"></div>
+                <div class="logoCirculo"><img id="logo" src="../recursos/logo-removebg-preview.png" alt=""></div>
+                <div class="lineaDiagonal"></div>
+            </div>
+
+            <form id="formularioCurso" class="formularioCurso">
+                <div class="grupoInput">
+                    <label for="nombreCurso">Nombre del curso</label>
+                    <input type="text" id="nombreCurso" placeholder="Ingrese el nombre">
+                </div>
+
+                <div class="grupoInput">
+                    <label for="estadoCurso">Estado del curso</label>
+                    <select id="estadoCurso">
+                        <option>Activo</option>
+                        <option>Inactivo</option>
+                    </select>
+                </div>
+
+
+            </form>
+            <div class="botoneraCurso">
+                <a href="../html/iniciosesion.html" class="btn btn-salir">Salir</a>
+                <button onclick="consultar()">Consultar</button>
+                <button onclick="verificarInsercionOActualizacion()">Guardar</button>
+                <button onclick="eliminar()">Eliminar</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

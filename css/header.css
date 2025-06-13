@@ -20,7 +20,6 @@ header {
 
 #logo {
     height: 13vh;
-    /* relativo a la altura de la pantalla */
     width: auto;
     border-radius: 15%;
 }
@@ -29,7 +28,6 @@ header {
     color: #0b0c2a;
     font-weight: 600;
     font-size: 2.2rem;
-    /* más grande que el texto base */
 }
 
 .redes-sociales {

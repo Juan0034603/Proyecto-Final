@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.acercaDeContainer {
+    width: 100%;
+    background-color: #61A5C2;
+    padding: 6% 0;
+    display: flex;
+    justify-content: center;
+}
+
+.acercaDe {
+    margin-top: -20px;
+    background-color: #f5f5f5;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 15% 2%;
+    position: relative;
+    border-radius: 10px;
+    height: 100px;
+    box-shadow: 0 4px 15px rgba(169, 214, 229, 0.5);
+}
+
+#imagenEstudiante {
+    width: 450px;
+    height: 640px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 90px;
+    box-shadow: 0 4px 15px rgba(169, 214, 229, 0.5);
+    position: absolute;
+    left: 2.5%;
+    top: -25%;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#imagenEstudiante:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+}
+
+.textoContainer {
+    background-color: #e1e5f2;
+    border-radius: 18px;
+    display: inline-block;
+    margin-left: 42%;
+    width: 60%;
+    height: 80px;
+    padding: 0%;
+    padding-bottom: 300px;
+    box-shadow: 0 4px 15px rgba(169, 214, 229, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.textoContainer:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+}
+
+#textoH2 {
+    color: #023E7D;
+    font-size: 48px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#textoP {
+    margin-top: 25px;
+    margin-left: 30px;
+    line-height: 22px;
+}
+
+span {
+    font-weight: bold;
+    color: #002855;
+}
+
+.misionVisionContainer {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.misionVision h3 {
+    color: #023E7D;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.misionVision p {
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: justify;
+    margin-left: 30px;
+}
+
+.nuevaSeccionContainer {
+    width: 100%;
+    margin-top: 1%;
+    padding: 6% 0;
+    display: flex;
+    gap: 80px;
+    margin: 0%;
+}
+
+#imagenIzquierda {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+    border-radius: 20px;
+    margin-left: 80%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#imagenIzquierda:hover {
+    transform: scale(1.065) rotate(-2deg);
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+}
+
+
+
+.mensajeDelDirector {
+    background-color: #e1e5f2;
+    border-radius: 18px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 20%;
+
+}
+
+.mensajeDelDirector:hover {
+    transform: scale(1.065) rotate(2deg);
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+}
+
+
+#tituloMensaje {
+    margin: 80px 75px;
+    color: #013A63;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+#textoMensaje {
+    margin-top: -45px;
+    margin-left: 45px;
+    line-height: 24px;
+
+}
+
+.centrar {
+    margin-left: 38px;
+}
+
+
+.seccionDosContainer {
+    width: 100%;
+    margin-top: -25px;
+    padding: 6% 0;
+    display: flex;
+    gap: 80px;
+
+}
+
+.visionValores {
+    background-color: #e1e5f2;
+    border-radius: 18px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 320px;
+    margin-top: -100px;
+}
+
+.visionValores:hover {
+    transform: scale(1.065) rotate(-2deg);
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+}
+
+#tituloVision {
+    margin: 40px 40px;
+    color: #013A63;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+#textoVision {
+    margin-top: -10px;
+    margin-left: 45px;
+    line-height: 22px;
+}
+
+#imagenDerecha {
+    background-color: #e1e5f2;
+    border-radius: 18px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: -100px;
+    margin-left: -20px;
+}
+
+#imagenDerecha:hover {
+    transform: scale(1.065) rotate(2deg);
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+}
+
+li {
+    margin-left: 60px;
+    margin-top: 5px;
+}
+
+.directorioContainer {
+    width: 100%;
+    padding: 6% 0%;
+    background-color: #023E7D;
+    text-align: center;
+    margin: 0%;
+}
+
+.directorioTitulo {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.directorioSubtitulo {
+    color: #A8C8EC;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.profesores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profesorCard {
+    background-color: #eaf2f9;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.profesorCard:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(97, 165, 194, 0.5);
+}
+
+.nombre {
+    color: #023E7D;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.asignatura {
+    color: #666;
+    font-size: 14px;
+    margin-top: 15px;
+}
+

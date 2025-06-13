@@ -1,0 +1,83 @@
+.footerContainer {
+    background-color: #979DAC;
+    padding: 50px 0;
+    color: #333;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.linkPiePagina {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.linkPiePagina a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.logoSection {
+    display: block;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+
+.logoImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    margin-left: 10px;
+}
+
+.logoText h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e1e5f2;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+
+.titulos{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e1e5f2;
+    margin-bottom: 15px;
+    margin-left: 85px;
+}
+
+.columnaFooter ul {
+    list-style: none;
+}
+
+.columnaFooter  ul li {
+    margin-bottom: 10px;
+}
+
+.columnaFooter ul li span {
+    color: #e1e5f2;
+    margin-left: 40px;
+}
+
+.contactoInfo p {
+    color: #e1e5f2;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 75px;
+
+}
+

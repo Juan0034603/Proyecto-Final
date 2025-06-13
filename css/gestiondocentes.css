@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #56a6df 0%, #bbdefb 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#sectionUno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #0466C8;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.15);
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    border: 2px solid #0466C8;
+    box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+}
+
+#logo {
+    height: 13vh;
+    width: auto;
+    border-radius: 15%;
+}
+
+
+.logo-circle {
+    width: 90px;
+    height: 90px;
+    background: transparent;
+    border: 2px solid #1976d2;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1976d2;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #ffffff;
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+input,
+select {
+    padding: 8px 12px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: transparent;
+    transition: border-color 0.2s ease;
+    color: #000000;
+}
+
+input::placeholder {
+    color: #000000;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: white;
+    font-weight: normal;
+    background-color: #001845;
+    min-width: 120px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+
+.btn-salir {
+    background-color: #001845;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+
+}

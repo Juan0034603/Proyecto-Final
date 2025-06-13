@@ -19,3 +19,8 @@ function escribirDataStoreConJSON(nombreStore,arrayJSON) {
     localStorage.setItem(nombreStore, JSON.stringify(arrayJSON))
 
 }
+
+function removerLocalStore() {
+
+    localStorage.removeItem('personas')
+}

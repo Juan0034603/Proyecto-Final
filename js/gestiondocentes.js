@@ -38,14 +38,14 @@ function verificarInsercionOActualizacion() {
 
 function guardar() {
 
-    persona = new Estudiante(tipoIdentificacion.value, numeroIdentificacion.value,
+    persona = new Docente(tipoIdentificacion.value, numeroIdentificacion.value,
         nombresCompletos.value, apellidosCompletos.value, fechaNacimiento.value,
-        telefonoContacto.value, telefonoSecundario.value, curso.value, correoPersonal.value,
-        correoEmpresarial.value, contrasena.value, usuario.value, "activo", "estudiante")
+        telefonoContacto.value, telefonoSecundario.value, " ", correoPersonal.value,
+        correoEmpresarial.value, contrasena.value, usuario.value, "activo", "docente")
 
     escribirDataStore(nombreLocalStore, persona, personas)
 
-    alert("El estudiante ha sido insertado con exito")
+    alert("El docente ha sido insertado con exito")
 
     console.table(personas)
 
@@ -65,7 +65,6 @@ function actualizar(indiceElementoActualizar) {
         personas[indiceElementoActualizar].fechaNacimiento = fechaNacimiento.value
         personas[indiceElementoActualizar].telefonoContacto = telefonoContacto.value
         personas[indiceElementoActualizar].telefonoSecundario = telefonoSecundario.value
-        personas[indiceElementoActualizar].curso = curso.value
         personas[indiceElementoActualizar].correoPersonal = correoPersonal.value
         personas[indiceElementoActualizar].correoEmpresarial = correoEmpresarial.value
         personas[indiceElementoActualizar].contrasena = contrasena.value
@@ -103,7 +102,6 @@ function consultar() {
         fechaNacimiento.value = personaEncontrada.fechaNacimiento
         telefonoContacto.value = personaEncontrada.telefonoContacto
         telefonoSecundario.value = personaEncontrada.telefonoSecundario
-        curso.value = personaEncontrada.curso
         correoPersonal.value = personaEncontrada.correoPersonal
         correoEmpresarial.value = personaEncontrada.correoEmpresarial
         contrasena.value = personaEncontrada.contrasena
@@ -120,7 +118,7 @@ function consultar() {
 
 function nuevo() {
 
-    document.getElementById("estudiantes").reset();
+    document.getElementById("docentes").reset();
 
 }
 

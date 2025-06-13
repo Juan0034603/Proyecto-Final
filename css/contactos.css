@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contactosContainer {
+    width: 100%;
+    height: 600px;
+    margin-top: 0%;
+    background-color: #979DAC;
+    padding: 6% 0;
+    display: flex;
+}
+
+
+.contactos {
+    margin-top: -20px;
+    background-color: #f5f5f5;
+    width: 1300px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(169, 214, 229, 0.5);
+    margin-left: 120px;
+    height: 580px;
+}
+
+#imagenContactos {
+    margin-left: 65px;
+    width: 600px;
+    margin-top: 90px;
+    box-shadow: 0 4px 15px rgba(169, 214, 229, 0.5);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#imagenContactos:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+}
+
+.textoContainer {
+    background-color: #e1e5f2;
+    border-radius: 18px;
+    width: 500px;
+    height: 400px;
+    margin-top: 90px;
+    box-shadow: 0 4px 15px rgba(169, 214, 229, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+.textoContainer:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+}
+
+#textoH2 {
+    color: #023E7D;
+    font-size: 48px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#textoP {
+    margin-top: 25px;
+    margin-left: 30px;
+    line-height: 22px;
+}
+
+span {
+    font-weight: bold;
+    color: #002855;
+}
+
+.seccionTelefonos {
+    display: flex;
+    gap: 200px;
+    margin-top: -135px;
+    justify-content: center;
+    padding: 6% 0;
+}
+
+.telefonos {
+    background-color: #023E7D;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.telefonos:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+}
+
+#iconoTelefono {
+    margin-top: 40px;
+    margin-left: 160px;
+    width: 60px;
+}
+
+#tituloTelefono {
+    margin-top: 20px;
+    margin-left: 70px;
+    color: white;
+}
+
+#numerosTelefono {
+    margin-top: 17px;
+    margin-left: 130px;
+    line-height: 30px;
+    color: white;
+}
+
+.mensajes {
+    background-color: #023E7D;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mensajes:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+}
+
+#iconoMensajes {
+    width: 80px;
+    margin-top: 40px;
+    margin-left: 160px;
+}
+
+#tituloMensajes {
+    margin-left: 100px;
+    color: white;
+    line-height: 32px;
+}
+
+#numerosMensajes {
+    margin-top: 17px;
+    margin-left: 130px;
+    line-height: 30px;
+    color: white;
+}
+
+.ubicacion {
+    background-color: #023E7D;
+    width: 600px;
+    height: 500px;
+    margin-left: 450px;
+    border-radius: 10px;
+    box-shadow: 0 9px 27px rgba(97, 165, 194, 0.75);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ubicacion:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(169, 214, 229, 0.7);
+}
+
+#iconoUbicacion {
+    width: 80px;
+    margin-top: 40px;
+    margin-left: 255px;
+}
+
+
+#mapaUbicacion {
+    margin-top: 30px;
+    width: 550px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.footerContainer {
+    background-color: #979DAC;
+    padding: 50px 0;
+    color: #333;
+    margin-top: 60px;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.logoSection {
+    display: block;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+
+.logoImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.logoText h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e1e5f2;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+
+.titulos {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e1e5f2;
+    margin-bottom: 15px;
+    margin-left: 85px;
+}
+
+.columnaFooter ul {
+    list-style: none;
+}
+
+.columnaFooter ul li {
+    margin-bottom: 10px;
+}
+
+.columnaFooter ul li span {
+    color: #e1e5f2;
+    margin-left: 40px;
+}
+
+.contactoInfo p {
+    color: #e1e5f2;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 75px;
+
+}

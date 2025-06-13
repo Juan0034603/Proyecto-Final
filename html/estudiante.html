@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <img id="lupa" src="../recursos/lupa.png" alt="lupa">
 
         <div class="divHeader">
@@ -40,14 +40,13 @@
 
 
                 <div class="input-group">
-                    <form action="">
-                        <input type="text" placeholder="Usuario" required>
+                 
+                        <h3>Si no conces tu horario acercate</h3>
 
-                    </form>
                 </div>
 
+            <button class="btnEnlaces" onclick="window.location.href='../html/consultarhorario.html'">Consultar Horario</button>
 
-                <button type="submit" class="botonInicio">Login</button>
             </div>
         </div>
         </div> 
@@ -92,9 +91,70 @@
             <button type="submit" class="botonInicio">Login</button>
 
             <div class="pie-formulario">
-                <a href="#" class="enlace-volver">← Volver al inicio</a>
+                <a href="../html/iniciosesion.html" class="enlace-volver">← Volver al inicio</a>
             </div>
         </div>
+    </section>
+
+
+    <section>
+
+        <div class="contenedorActividades">
+            <h3>Actividades</h3>
+            <table class="tablaActividades">
+                <thead>
+                    <tr>
+                        <th>Fecha de carga</th>
+                        <th>Fecha límite</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyActividades">
+                    <tr>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Nombre de la actividad"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Descripción"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Nombre de la actividad"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Descripción"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Nombre de la actividad"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Descripción"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Nombre de la actividad"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Descripción"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Nombre de la actividad"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Descripción"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="date" class="inputTabla"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Nombre de la actividad"></td>
+                        <td><input type="text" class="inputTabla" placeholder="Descripción"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        </div>
+
+
+
     </section>
 </body>
 

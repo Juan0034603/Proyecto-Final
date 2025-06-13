@@ -3,20 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Curso</title>
-    <link rel="stylesheet" href="../css/gestioncurso.css">
+    <title>Gestión de Curso</title>
+    <link rel="stylesheet" href="../css/gestionmaterias.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="../js/utilidades.js"></script>
-    <script src="../js/curso.js"></script>
-    <script src="../js/gestioncursos.js"></script>
+    <script src="../js/materia.js"></script>
+    <script src="../js/gestionmaterias.js"></script>
     <script>
-        // localStorage.removeItem("ultimoIdCursos"); //elimina el contador automatico
+        // localStorage.removeItem("ultimoIdMateria");
     </script>
 </head>
 
 <body>
+
     <header>
         <img id="lupa" src="../recursos/lupa.png" alt="lupa">
 
@@ -34,40 +35,43 @@
                     class="fas fa-user-circle"></i></a>
         </div>
     </header>
+    <main class="contenedor">
+        <div class="panel">
+            <div><img class="logo-panel" src="../recursos/logo-removebg-preview.png" alt=""></div>
 
-
-    <section class="contenedorExterno">
-        <div class="contenedorFormulario">
-            <div class="logoDecorativo">
-                <div class="lineaDiagonal"></div>
-                <div class="logoCirculo"><img id="logo" src="../recursos/logo-removebg-preview.png" alt=""></div>
-                <div class="lineaDiagonal"></div>
-            </div>
-
-            <form id="formularioCurso" class="formularioCurso">
-                <div class="grupoInput">
-                    <label for="nombreCurso">Nombre del curso</label>
-                    <input type="text" id="nombreCurso" placeholder="Ingrese el nombre">
+            <form id="materiasForm">
+                <div class="campos">
+                    <div class="campo">
+                        <label>Nombre de la materia</label>
+                        <input id="nombreMateria" type="text" placeholder="nombre" required minlength="3" maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+">
+                    </div>
+                    <div class="campo">
+                        <label>Descripción</label>
+                        <input id="descripcion" type="text" placeholder="Descripción" minlength="5" maxlength="100">
+                    </div>
                 </div>
 
-                <div class="grupoInput">
+                <div class="estado">
                     <label for="estadoCurso">Estado del curso</label>
-                    <select id="estadoCurso">
+                    <select id="selectEstado" required>
                         <option>Activo</option>
                         <option>Inactivo</option>
                     </select>
                 </div>
 
-
             </form>
-            <div class="botoneraCurso">
-                <a href="../html/iniciosesion.html" class="btn btn-salir">Salir</a>
-                <button onclick="consultar()">Consultar</button>
-                <button onclick="verificarInsercionOActualizacion()">Guardar</button>
-                <button onclick="eliminar()">Eliminar</button>
+
+
+            <div class="botones">
+                <button onclick="" class="btn">Volver</button>
+                <button onclick="consultar()" class="btn">Consultar</button>
+                <button onclick="verificarInsercionOActualizacion()" class="btn">Guardar</button>
+                <button onclick="eliminar()" class="btn">Eliminar</button>
             </div>
         </div>
-    </section>
+    </main>
+
 
 </body>
 

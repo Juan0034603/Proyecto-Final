@@ -1,206 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultar Horario</title>
-    <link rel="stylesheet" href="../css/consultarhorario.css">
+    <title>Horario Escolar</title>
+    <link rel="stylesheet" href="../css/gestionhorario.css">
+    <script src="../js/utilidades.js"></script>
+    <script src="../js/curso.js"></script>
+    <script src="../js/gestioncursos.js"></script>
+    <script src="../js/gestionhorario.js"></script>
+    <script src="../js/gestionconsultarhorario.js"></script>
+
 </head>
 
 <body>
 
-    <section class="horarioContainer">
-        <div class="horario">
-            <table class="tablaHorarios">
-                <thead>
-                    <tr>
-                        <th class="encabezadoTabla">DÍA</th>
-                        <th class="encabezadoTabla">Profesor y Materia</th>
-                        <th class="encabezadoTabla">Horario</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <!-- LUNES -->
-                    <tr>
-                        <td rowspan="2" class="celdaTabla celdaDia">LUNES</td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <!-- MARTES -->
-                    <tr>
-                        <td rowspan="2" class="celdaTabla celdaDia">MARTES</td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <!-- MIÉRCOLES -->
-                    <tr>
-                        <td rowspan="2" class="celdaTabla celdaDia">MIÉRCOLES</td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <!-- JUEVES -->
-                    <tr>
-                        <td class="celdaTabla celdaDia">JUEVES</td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <!-- VIERNES -->
-                    <tr>
-                        <td class="celdaTabla celdaDia">VIERNES</td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaProfesor tarjetaLunes">
-                                <div class="nombreProfesor">
-
-                                    <label for="consultarProfesor">Consultar Profesor</label>
-                                    <input type="text" readonly><br>
-
-                                    <br><label for="consultar Materia">Consultar Materia</label>
-                                    <input type="text" readonly>
-                                </div>
-                        </td>
-                        <td class="celdaTabla">
-                            <div class="tarjetaHorario">
-                                <div class="horarioProfesor"><label for="consultar Horario">Consultar Horario</label>
-                                    <input type="text" readonly>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="contenedorPrincipal">
+        <div class="barraSuperior">
+            <label for="grado">Seleccione el Grado:</label>
+            <select id="grado">
+                <option>Activo</option>
+                <option>Otro</option>
+            </select>
+            <button onclick="consultarHorarioCurso()" class="btnConsultar">Consultar Horario</button>
         </div>
-    </section>
+
+        <table class="tablaHorario">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7:00 - 8:15 Am</td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>8:15 - 9:30 Am</td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+                <tr class="filaDescanso">
+                    <td colspan="6">DESCANSO</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00 Am</td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>11:00 Am - 12:00 Pm</td>
+                    <td><select disabled>
+                            <option disabled>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                    <td><select disabled>
+                            <option>Activo</option>
+                        </select></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
 
 </body>
 

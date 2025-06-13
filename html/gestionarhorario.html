@@ -21,7 +21,6 @@
                 <option>Activo</option>
                 <option>Otro</option>
             </select>
-            <button class="btnConsultar">Consultar Horario</button>
         </div>
 
         <table class="tablaHorario">
@@ -115,8 +114,9 @@
         </table>
 
         <div class="botonesFinales">
-            <button class="btnGuardar">Guardar Cambios</button>
-            <button class="btnEliminar">Eliminar Horario</button>
+            <button onclick="guardarHorarioCurso()" class="btnGuardar">Guardar Cambios</button>
+            <button onclick="eliminarHorarioCurso()" class="btnEliminar">Eliminar Horario</button>
+            <button onclick="consultarHorarioCurso()" class="btnEliminar">Consultar</button>
         </div>
     </div>
 

@@ -209,3 +209,66 @@
 }
 
 
+
+
+/* Actividades */
+.contenedorActividades {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #5AA8CE;
+    background-color: #E3F4FB;
+    /* Azul muy claro para fondo */
+    border-radius: 8px;
+}
+
+.contenedorActividades h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #2B6E8C;
+    /* Azul más oscuro derivado */
+    text-align: center;
+}
+
+.tablaActividades {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tablaActividades th,
+.tablaActividades td {
+    border: 1px solid #5AA8CE;
+    padding: 8px;
+    text-align: left;
+}
+
+.tablaActividades th {
+    background-color: #B6DDF1;
+    font-weight: bold;
+    color: #2B6E8C;
+}
+
+.inputTabla {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #5AA8CE;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #F7FCFE;
+    color: #2B6E8C;
+}
+
+
+.btnEnlaces {
+    background-color: #007C8A;
+    padding: 15px 25px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+
+}

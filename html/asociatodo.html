@@ -1,109 +1,101 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asignación de Materias</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/asociatodo.css">
+    <script src="../js/asociatodo.js"></script>
 </head>
 
 <body>
+    <div class="contenedor">
+        <h2>Asignación de Materias a Cursos</h2>
+        <form>
+            <div class="contenedorFormulario">
+                <div class="filaFormulario">
+                    <div class="grupoCampo">
+                        <label for="idCurso">Identificador del Curso</label>
+                        <select type="text" id="idCurso" name="idCurso" placeholder="Identificador del Curso" required></select>
+                    </div>
 
-    <div class="form-container">
-        <h2>Asignación de materias a cursos</h2>
-
-        <div class="form-row">
-            <div class="form-field">
-                <label for="id-curso">Identificador del curso</label>
-                <input type="text" id="id-curso" name="id-curso" placeholder="Solo números" required pattern="\d+"
-                    inputmode="numeric" title="Solo se permiten números"
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <div class="grupoCampo">
+                        <label for="materiasCurso">Identificación de Materias</label>
+                        <select type="text" id="materiasDocente" name="materiasDocente"
+                            placeholder="Identificación de Materias" required></select>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-field">
-                <label>Modalidad del examen</label>
-                <select>
-                    <option>Seleccionar...</option>
-                    <option>Presencial</option>
-                    <option>Virtual</option>
-                </select>
+            <div class="grupoBotones">
+                <button onclick="guardarCursoMateria()" type="submit" class="boton">Guardar</button>
+                <button onclick="consultarCursoMateria()" type="button" class="boton">Consultar</button>
+                <button onclick="eliminarCursoMateria()" type="reset" class="boton">Eliminar</button>
             </div>
-        </div>
-
-        <div class="buttons">
-            <button>Validar</button>
-            <button>Consultar</button>
-            <button>Registrar</button>
-            <button>Imprimir</button>
-        </div>
+        </form>
     </div>
 
+    <div class="contenedor">
+        <h2>Asignación de Materias Docentes</h2>
+        <form>
+            <div class="contenedorFormulario">
+                <div class="filaFormularioTres">
+                    <div class="grupoCampo">
+                        <label for="idCursoDocente">Identificador del Curso</label>
+                        <select type="text" id="idCursoDocente" name="idCursoDocente"
+                            placeholder="Identificador del Curso" required></select>
+                    </div>
 
-    <div class="form-container">
-        <h2>Asignación de materias Docentes</h2>
+                    <div class="grupoCampo">
+                        <label for="materiasDocente">Identificación de Materias</label>
+                        <select type="text" id="materiasDocente" name="materiasDocente"
+                            placeholder="Identificación de Materias" required></select>
+                    </div>
 
-        <div class="form-row">
-            <div class="form-field">
-                <label for="id-curso">Identificador del curso</label>
-                <input type="text" id="id-curso" name="id-curso" placeholder="Solo números" required pattern="\d+"
-                    inputmode="numeric" title="Solo se permiten números"
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <div class="grupoCampo">
+                        <label for="idDocente">Identificación Docente</label>
+                        <select type="text" id="idDocente" name="idDocente" placeholder="Identificación Docente"
+                            required></select>
+                    </div>
+                </div>
+
+                <h2>Horario</h2>
+
+                <div class="filaFormulario">
+                    <div class="grupoCampo">
+                        <label for="horario">Días</label>
+                        <select id="horario" name="horario" required>
+                            <option value="">Días</option>
+                            <option value=""></option>
+
+                        </select>
+                    </div>
+
+                    <div class="grupoCampo">
+                        <label for="horas">Horas</label>
+                        <select id="horas" name="horas" required>
+                            <option value="">Horas</option>
+
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="form-field">
-                <label>Identificación Materias</label>
-                <input type="text" id="id-curso" name="id-curso" placeholder="Solo números" required pattern="\d+"
-                inputmode="numeric" title="Solo se permiten números"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+
+            <div class="grupoBotones">
+                <button onclick="guardarCursoMateriaDocente()" type="submit" class="boton">Guardar</button>
+                <button onclick="consultarCursoMateriaDocente()" type="button" class="boton">Consultar</button>
+                <button onclick="eliminarCursoMateriaDocente()" type="reset" class="boton">Eliminar</button>
             </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-field">
-                <label>Identificación Docente</label>
-                <input type="number"id="id-curso" name="id-curso" placeholder="Solo números" required pattern="\d+"
-                inputmode="numeric" title="Solo se permiten números"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-            </div>
-            <div class="form-field">
-                <label for="dia-horario">Día</label>
-                <select id="dia-horario" name="dia-horario" required>
-                  <option value="">Seleccionar día...</option>
-                  <option value="lunes">Lunes</option>
-                  <option value="martes">Martes</option>
-                  <option value="miércoles">Miércoles</option>
-                  <option value="jueves">Jueves</option>
-                  <option value="viernes">Viernes</option>
-                  <option value="sábado">Sábado</option>
-                  <option value="domingo">Domingo</option>
-                </select>
-              </div>
-              
-              <div class="form-field">
-                <label for="rango-hora">Horario</label>
-                <select id="rango-hora" name="rango-hora" required>
-                  <option value="">Seleccionar horario...</option>
-                  <option value="06:00-08:00">06:00 - 08:00</option>
-                  <option value="08:00-10:00">08:00 - 10:00</option>
-                  <option value="10:00-12:00">10:00 - 12:00</option>
-                  <option value="13:00-15:00">13:00 - 15:00</option>
-                  <option value="15:00-17:00">15:00 - 17:00</option>
-                  <option value="18:00-20:00">18:00 - 20:00</option>
-                </select>
-              </div>
-          99    
-        </div>
-        
-
-
-
-        <div class="buttons">
-            <button>Validar</button>
-            <button>Consultar</button>
-            <button>Registrar</button>
-            <button>Imprimir</button>
-        </div>
+        </form>
     </div>
+</body>
+
+
+
+
+
+
 </body>
 
 </html>

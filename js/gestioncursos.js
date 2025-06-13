@@ -10,7 +10,7 @@ function recuperarElementosFormulario() {
 
 }
 
-function generarIdAutoincremental(nombreContador = "ultimoIdDocente") {
+function generarIdAutoincremental(nombreContador = "ultimoIdCursos") {
     let ultimoId = parseInt(localStorage.getItem(nombreContador)) || 0;
     let nuevoId = ultimoId + 1;
     localStorage.setItem(nombreContador, nuevoId);
@@ -88,7 +88,7 @@ function consultar() {
 
     } else {
 
-        alert('Empleado no se encuentra registrado')
+        alert('curso no se encuentra registrado')
         nuevo()
     }
 
@@ -98,17 +98,17 @@ function consultar() {
 
         var indiceCursoEncontrado = cursos.findIndex(curso => curso.nombreCurso == nombreCurso.value)
 
-        if (indiceEmpleadoEncontrado >= 0) {
+        if (indiceCursoEncontrado >= 0) {
 
             cursos.splice(indiceCursoEncontrado, 1)
 
             escribirDataStoreConJSON(nombreLocalStore, cursos)
 
-            alert("Empleado ha sido eliminado con exito")
+            alert("Curso ha sido eliminado con exito")
 
         } else {
 
-            alert('Empleado no se encuentra registrado')
+            alert('Curso no se encuentra registrado')
         }
 
     }

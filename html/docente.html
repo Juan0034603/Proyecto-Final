@@ -1,11 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Docente</title>
+    <link rel="stylesheet" href="../css/docente.css">
 </head>
+
 <body>
-    <a href="../html/administrador.html"></a>
+
+    <!-- header juan -->
+
+    <section class="gestionMateriasContainer">
+        <div class="gestionMaterias">
+            <div>
+                <img id="imagenProfesora" src="../recursos/imagenprofesora.jpg"
+                    alt="Imagen profesora">
+            </div>
+
+            <div class="textoContainerMaterias">
+                <h2 id="tituloMaterias">Gestión Materias</h2>
+
+                <p id="textoMaterias">
+                    Gestionar <span>materias disponibles</span><br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp en el Plan de Estudios
+                </p>
+
+                <button id="botonMaterias">Gestión Materias</button>
+
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <section class="consultarHorarioContainer">
+        <div class="consultarHorario">
+            <div>
+                <img id="imagenHorario" src="../recursos/imagenhorario.jpg"
+                    alt="Imagen horario">
+            </div>
+
+            <div class="textoContainerHorario">
+                <h2 id="tituloHorario">Consultar Horario</h2>
+
+
+                <button onclick="window.location.href='../html/consultarhorario.html'" id="botonHorario">Gestión Materias</button>
+
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="SectionContraseña">
+        <div class="contenedor-formulario">
+            <h1 class="titulo-formulario">Cambiar Contraseña</h1>
+            <hr class="divisor-titulo">
+
+            <form>
+
+                <input type="text" class="entrada-formulario" id="usuario" placeholder="Usuario" requiredminlength="3"
+                    autocomplete="Usuario">
+                <div class="texto-ayuda">Mínimo 3 caracteres</div>
+
+
+
+                <input type="password" class="entrada-formulario" id="contrasena_actual" placeholder="Contraseña"
+                    required autocomplete="current-password">
+                <div class="texto-ayuda">Ingrese su contraseña actual</div>
+
+
+                <input type="password" class="entrada-formulario" id="nueva_contrasena" placeholder="Nueva contraseña"
+                    required minlength="6" pattern="^(?=.[a-z])(?=.[A-Z])(?=.*\d).{6,}$" autocomplete="new-password">
+                <div class="texto-ayuda">Mínimo 6 caracteres, incluir mayúsculas, minúsculas y números</div>
+
+
+
+                <input type="password" class="entrada-formulario" id="confirmar_contrasena"
+                    placeholder="Confirmar contraseña" required minlength="6" autocomplete="new-password">
+                <div class="texto-ayuda">Debe coincidir con la nueva contraseña</div>
+
+
+
+
+
+
+
+            </form>
+
+            <button onclick="validarContrasena()" type="submit" class="btnEnlaces">Cambio Contraseña</button>
+
+            <div class="pie-formulario">
+                <a href="../html/iniciosesion.html" class="enlace-volver">← Volver al inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footerContainer">
+        <div class="footer">
+            <div class="logoSection">
+                <div class="logoCircle">
+                    <img src="../recursos/logo-removebg-preview.png" alt="Mi ColeWeb Logo" class="logoImage">
+                </div>
+                <div class="logoText">
+                    <h3>MI COLEWEB</h3>
+                </div>
+            </div>
+
+            <div class="columnaFooter">
+                <h4 class="titulos">NAVEGACIÓN RÁPIDA</h4>
+                <ul>
+                    <li><span>Acerca de</span></li>
+                    <li><span>Contactos</span></li>
+                    <li><span>Inicio sesión</span></li>
+                    <li><span>Registro</span></li>
+                </ul>
+            </div>
+
+            <div class="columnaFooter">
+                <h4 class="titulos">CONÉCTATE</h4>
+                <ul>
+                    <li><span>Facebook</span></li>
+                    <li><span>Twitter</span></li>
+                    <li><span>Instagram</span></li>
+                    <li><span>YouTube</span></li>
+                </ul>
+            </div>
+
+            <div class="columnaFooter">
+                <h4 class="titulos">CONTÁCTANOS</h4>
+                <div class="contactoInfo">
+                    <p>info@micoleweb.com</p>
+                    <p>+57 305 341 3428</p>
+                    <p>Sincelejo, Sucre</p>
+                    <p>Lun - Vie: 8:00 - 17:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
 </body>
+
 </html>

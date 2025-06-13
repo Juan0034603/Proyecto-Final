@@ -4,56 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Actividades</title>
-    <link rel="stylesheet" href="../css/registro.css">
-    
+    <link rel="stylesheet" href="../css/gestionactividades.css">
+</head>
 <body>
-   
-    <div class="container">
-        <div class="logo">
-            <div class="logo-circle">LOGO</div>
-        </div>
-
+    <div class="contenedor">
         <form>
-            <div class="form-container">
-
-                <div class="form-group">
-                    <label for="nombre-de-la-actividad">Nombre de la Actividad</label>
-                    <input type="text" id="nombre-de-la-actividad" name="nombre-de-la-actividad" placeholder="Nombre de la Actividad" required>
+            <div class="contenedorFormulario">
+                <div class="filaFormulario">
+                    <div class="grupoCampo">
+                        <label for="nombreActividad">Nombre de la Actividad</label>
+                        <input type="text" id="nombreActividad" name="nombreActividad" placeholder="Nombre de la Actividad" required>
+                    </div>
+                    
+                    <div class="grupoCampo">
+                        <label for="descripcionActividad">Descripción de la Actividad</label>
+                        <input type="text" id="descripcionActividad" name="descripcionActividad" placeholder="Descripción de la Actividad" required>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="nombres-completos">Descripción de la Actividad</label>
-                    <input type="text" id="nombres-completos" name="nombres-completos" placeholder="Descripción de la Actividad" required>
+                
+                <div class="filaFormulario">
+                    <div class="grupoCampo">
+                        <label for="materiaAsociada">Materia Asociada</label>
+                        <select id="materiaAsociada" name="materiaAsociada" required>
+                            <option value=""></option>
+                            <option value="matematicas">Matemáticas</option>
+                            <option value="ciencias">Ciencias</option>
+                            <option value="historia">Historia</option>
+                            <option value="lengua">Lengua</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grupoCampo">
+                        <label for="fechaLimite">Fecha límite de Entrega</label>
+                        <input type="date" id="fechaLimite" name="fechaLimite" required>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="materia-asociada">Materia Asociada</label>
-                    <select id="materia-asociada" name="materia-asociada" required>
-                        <option value=""></option>
-            
-
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="fecha-limite-de-entreda">Fecha límite de Entrega</label>
-                    <input type="date" id="fecha-limite-de-entreda" name="fecha-limite-de-entreda" required>
-                </div>
-             
             </div>
-
-            <div class="button-group">
-                <button type="submit" class="btn btn-enviar">Enviar</button>
-                <button type="button" class="btn btn-consulta">Consulta</button>
-                <button type="reset" class="btn btn-limpiar">Limpiar</button>
-                <button type="button" class="btn btn-salir">Salir</button>
+            
+            <div class="grupoBotones">
+                <button type="submit" class="boton">Enviar</button>
+                <button type="button" class="boton">Consultar</button>
+                <button type="reset" class="boton">Limpiar</button>
+                <button type="button" class="boton">Salir</button>
             </div>
         </form>
     </div>
-</body>
-
-
-
-    
 </body>
 </html>

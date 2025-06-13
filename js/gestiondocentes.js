@@ -122,3 +122,183 @@ function nuevo() {
 
 }
 
+
+// Nombre del localStorage que comparten docentes y estudiantes
+nombreLocalStore = "personas"
+
+// Variables globales
+let personas = []
+let usuario, contrasenaActual, nuevaContrasena, confirmarContrasena
+
+function recuperarElementosFormulario() {
+    // Leer datos del localStorage
+    personas = leerDataStore(nombreLocalStore)
+    
+    // Obtener elementos del formulario
+    usuario = document.getElementById("usuario")
+    contrasenaActual = document.getElementById("contrasena_actual")
+    nuevaContrasena = document.getElementById("nueva_contrasena")
+    confirmarContrasena = document.getElementById("confirmar_contrasena")
+}
+
+function cambiarContrasena() {
+    // Recuperar elementos del formulario
+    recuperarElementosFormulario()
+    
+    // Validar que todos los campos estén llenos
+    if (!validarCamposVacios()) {
+        return false
+    }
+    
+    // Validar que las contraseñas coincidan
+    if (!validarCoincidenciaContrasenas()) {
+        return false
+    }
+    
+    // Buscar el usuario en el localStorage
+    var usuarioEncontrado = personas.find(persona => 
+        persona.usuario === usuario.value.trim()
+    )
+    
+    if (usuarioEncontrado !== undefined) {
+        // Verificar contraseña actual
+        if (usuarioEncontrado.contrasena === contrasenaActual.value) {
+            // Cambiar la contraseña
+            usuarioEncontrado.contrasena = nuevaContrasena.value
+            
+            // Guardar en localStorage
+            escribirDataStoreConJSON(nombreLocalStore, personas)
+            
+            alert("Contraseña cambiada exitosamente")
+            limpiarFormulario()
+            
+            return true
+        } else {
+            alert("La contraseña actual es incorrecta")
+            contrasenaActual.focus()
+            return false
+        }
+    } else {
+        alert("Usuario no encontrado")
+        usuario.focus()
+        return false
+    }
+}
+
+function validarCamposVacios() {
+    if (usuario.value.trim() === "") {
+        alert("Por favor ingrese su usuario")
+        usuario.focus()
+        return false
+    }
+    
+    if (contrasenaActual.value === "") {
+        alert("Por favor ingrese su contraseña actual")
+        contrasenaActual.focus()
+        return false
+    }
+    
+    if (nuevaContrasena.value === "") {
+        alert("Por favor ingrese la nueva contraseña")
+        nuevaContrasena.focus()
+        return false
+    }
+    
+    if (confirmarContrasena.value === "") {
+        alert("Por favor confirme la nueva contraseña")
+        confirmarContrasena.focus()
+        return false
+    }
+    
+    return true
+}
+
+function validarCoincidenciaContrasenas() {
+    if (nuevaContrasena.value !== confirmarContrasena.value) {
+        alert("Las contraseñas no coinciden")
+        confirmarContrasena.focus()
+        return false
+    }
+    return true
+}
+
+function validarFortalezaContrasena() {
+    const patron = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/
+    
+    if (!patron.test(nuevaContrasena.value)) {
+        alert("La nueva contraseña debe tener mínimo 6 caracteres, incluir mayúsculas, minúsculas y números")
+        nuevaContrasena.focus()
+        return false
+    }
+    return true
+}
+
+function limpiarFormulario() {
+    usuario.value = ""
+    contrasenaActual.value = ""
+    nuevaContrasena.value = ""
+    confirmarContrasena.value = ""
+}
+
+// Función para manejar el evento del botón
+function manejarCambioContrasena(event) {
+    event.preventDefault() // Prevenir envío del formulario
+    
+    // Validar fortaleza de contraseña
+    if (!validarFortalezaContrasena()) {
+        return
+    }
+    
+    // Ejecutar cambio de contraseña
+    cambiarContrasena()
+}
+
+// Funciones auxiliares para localStorage (deben estar en tu archivo principal)
+function leerDataStore(nombreStore) {
+    let datos = localStorage.getItem(nombreStore)
+    if (datos === null || datos === undefined) {
+        return []
+    } else {
+        return JSON.parse(datos)
+    }
+}
+
+function escribirDataStoreConJSON(nombreStore, arrayObjetos) {
+    localStorage.setItem(nombreStore, JSON.stringify(arrayObjetos))
+}
+
+// Event listener para cuando se carga la página
+document.addEventListener('DOMContentLoaded', function() {
+    // Buscar el botón de login y agregar el event listener
+    const botonLogin = document.querySelector('.botonInicio')
+    if (botonLogin) {
+        botonLogin.addEventListener('click', manejarCambioContrasena)
+    }
+    
+    // Validación en tiempo real para confirmar contraseña
+    document.getElementById('confirmar_contrasena')?.addEventListener('input', function() {
+        const nueva = document.getElementById('nueva_contrasena').value
+        const confirmar = this.value
+        
+        if (nueva !== '' && confirmar !== '') {
+            if (nueva === confirmar) {
+                this.style.borderColor = 'green'
+            } else {
+                this.style.borderColor = 'red'
+            }
+        }
+    })
+    
+    // Validación en tiempo real para nueva contraseña
+    document.getElementById('nueva_contrasena')?.addEventListener('input', function() {
+        const patron = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/
+        
+        if (this.value !== '') {
+            if (patron.test(this.value)) {
+                this.style.borderColor = 'green'
+            } else {
+                this.style.borderColor = 'red'
+            }
+        }
+    })
+})
